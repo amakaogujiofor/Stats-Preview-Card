@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 /* Custom Styles */
 
 :root {
@@ -19,7 +23,9 @@
 body {
   background-color: var(--clr-primary-main-bg);
   font-family: var(--ff-primary);
+  margin: 0 auto;
   margin-top: 5em;
+  width: 375px;
 }
 
 .hero-image {
@@ -27,6 +33,7 @@ body {
 }
 
 .box {
+  margin-bottom: 0;
   width: auto;
   height: 220px;
   object-fit: cover;
@@ -81,4 +88,74 @@ p {
   padding-top: 0;
   letter-spacing: 1px;
   color: var(--clr-stats-headings);
+}
+
+/* Media Queries */
+@media (min-width: 500px) {
+  body {
+    margin-top: 10em;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+  }
+  .img-pack {
+    width: 50%;
+    margin-top: 0;
+  }
+
+  img {
+    border-top-left-radius: 0;
+  }
+
+  .content {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0;
+  }
+
+  .box {
+    width: 400px;
+    background-image: url(/images/image-header-desktop.jpg);
+    height: 100%;
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 10px;
+  }
+  .card-content {
+    width: 350px;
+    padding: 2em 2em 0 2em;
+    height: 50%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+  }
+  p {
+    margin-top: 16px;
+    text-align: left;
+    font-size: 0.7rem;
+    line-height: 20px;
+  }
+
+  .stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+  }
+
+  .stats-title {
+    margin-top: 3em;
+    padding: 1em 0 0 0;
+    font-size: 1.2rem;
+  }
+
+  .works {
+    padding: 0;
+    font-size: 0.5rem;
+  }
 }
